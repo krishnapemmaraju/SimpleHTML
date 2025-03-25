@@ -22,7 +22,7 @@
 		  <tr> <td> Tom	 </td> <td> Shepherd </td> <td> Ripon </td> <td> Engineer </td> <td id="live-time1"> </td> </tr>
 		  <tr> <td> James </td> <td> Skyler </td> <td> Ripon </td> <td> Traveller </td> <td id="live-time2"> </td></tr>
 		  <tr> <td> Kiran </td> <td> Venkat </td> <td> Ripon </td> <td> Explorer </td> <td id="live-time3"></td> </tr>
-		  <tr> <td> <div class="btn"> <button> Submit </button> </td> <td> <button> Submit2 </button> </div> </td>  </tr>
+		  <tr> <td> <div class="btn"> <button onClick="navigateToPage()"> Submit </button> </td> <td> <button> Submit2 </button> </div> </td>  </tr>
          </table>		  
 		<div class =".btn-container"> 
 		  <button class ="right-btn"> Login </button>
@@ -47,6 +47,10 @@
 	document.getElementById("live-time2").textContent = timeStr;document.getElementById("live-time3").textContent = timeStr;
 	
   }
+  
+  function navigateToPage() {
+  window.location.href = 'Login.html';
+}
 
   // Update immediately and every second
   updateTime();
