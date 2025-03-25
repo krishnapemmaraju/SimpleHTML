@@ -6,6 +6,7 @@
     <title>My First Webpage</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="header1">
         <h1>Welcome to My Site - Folks</h1>
@@ -16,11 +17,11 @@
 	   <h1> Table Info </h1> </header>
 	    <table> 
 		  <tr> 
-		    <th> FirstName </th> <th> LastName </th> <th> Stay </th> <th> Occupation </th> </tr>
-		  <tr> <td> Krishna </td> <td> Pemmaraju </td> <td> Ripon </td> <td> Player </td> </tr>
-		  <tr> <td> Tom	 </td> <td> Shepherd </td> <td> Ripon </td> <td> Engineer </td> </tr>
-		  <tr> <td> James </td> <td> Skyler </td> <td> Ripon </td> <td> Traveller </td> </tr>
-		  <tr> <td> Kiran </td> <td> Venkat </td> <td> Ripon </td> <td> Explorer </td> </tr>
+		    <th> FirstName </th> <th> LastName </th> <th> Stay </th> <th> Occupation </th> <th> Time </th> </tr>
+		  <tr> <td> Krishna </td> <td> Pemmaraju </td> <td> Ripon </td> <td> Player </td> <td id="live-time"></td></tr>
+		  <tr> <td> Tom	 </td> <td> Shepherd </td> <td> Ripon </td> <td> Engineer </td> <td id="live-time1"> </td> </tr>
+		  <tr> <td> James </td> <td> Skyler </td> <td> Ripon </td> <td> Traveller </td> <td id="live-time2"> </td></tr>
+		  <tr> <td> Kiran </td> <td> Venkat </td> <td> Ripon </td> <td> Explorer </td> <td id="live-time3"></td> </tr>
 		  <tr> <td> <div class="btn"> <button> Submit </button> </td> <td> <button> Submit2 </button> </div> </td>  </tr>
          </table>		  
 		<div class =".btn-container"> 
@@ -37,5 +38,19 @@
     <footer>
         <p>&copy; 2023 My Website</p>
     </footer>
+	<script>
+  function updateTime() {
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString(); // Format: "2:30:45 PM"
+    document.getElementById("live-time").textContent = timeStr;
+	document.getElementById("live-time1").textContent = timeStr;
+	document.getElementById("live-time2").textContent = timeStr;document.getElementById("live-time3").textContent = timeStr;
+	
+  }
+
+  // Update immediately and every second
+  updateTime();
+  setInterval(updateTime, 1000);
+</script>
 </body>
 </html>
