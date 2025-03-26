@@ -109,7 +109,7 @@ tr:nth-child(even) {
 }
 
 input {
-  width: 92%;
+  width: 92px;
   font-size:1rem;
   padding:0.5rem;
 }
